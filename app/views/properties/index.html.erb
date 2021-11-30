@@ -1,0 +1,6 @@
+<%  @properties.each do |property| %>
+<h1> <%= property.name %> </h1>
+<p> <%= property.city %> </p>
+<p> <%= property.address %> </p>
+<%= link_to(property.name, property_path(property)) %>
+<% end %>
