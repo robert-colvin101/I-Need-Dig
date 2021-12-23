@@ -1,1 +1,17 @@
 @import "pages/home";
+@import "components/navbar";
+@import "pages/sign_up";
+@import "bootstrap/scss/bootstrap";
+
+.logo {
+  padding: 16px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 30px;
+  font-family: 'Rubik Mono One', sans-serif;
+}
+
+a {
+  color: inherit;
+  }

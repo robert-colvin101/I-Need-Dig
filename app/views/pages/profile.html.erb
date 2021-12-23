@@ -1,0 +1,7 @@
+<h1> Welcome <%= "#{current_user.name}" %> </h1>
+
+<%= current_user.properties.each do |property| %>
+  <%= property.name  %>
+<% end %>
+
+<%= link_to 'Create a new property', new_property_path %>
