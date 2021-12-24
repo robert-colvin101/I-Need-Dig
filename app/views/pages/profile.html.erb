@@ -1,7 +1,41 @@
-<h1> Welcome <%= "#{current_user.name}" %> </h1>
+<h2> Welcome <%= "#{current_user.name}" %> </h2>
+<!-- upcoming bookings -->
+<div class="bookingbox">
+  <p>Upcoming Bookings</p>
+  <% if current_user.bookings.size < 1 %>
+    <p>You currently have no bookings</p>
+  <% else %>
+    <% current_user.bookings.each do |booking| %>
+    <%= booking.booking_start %>
+    <%= booking.booking_end %>
+   Booked by <%= booking.user.name %>
+    <% end %>
+  <% end %>
+</div>
+<!-- properties cards -->
+    <p class="card-box-title">My Properties</p>
+    <div class="property-cards">
+    <% current_user.properties.each do |property| %>
+    <div class="card-container">
+      <%= image_tag('room-image', class: 'card-image') %>
+      <div class="card-text">
+        <p class="card-name"><%= property.name  %> </p>
+        <div class="box1">
+          <p class="card-beds"> <%= fa_icon "bed" %> <%= property.beds %> </p>
+          <p class="card-price"><%= fa_icon "money-bill" %> £<%= property.price %></p>
+        </div>
+        <div class="box1">
 
-<%= current_user.properties.each do |property| %>
-  <%= property.name  %>
-<% end %>
+          <p class="card-rooms"> <%= fa_icon "home" %> <%= property.rooms %> </p>
+          <p> <%= fa_icon "city" %> <%= property.city %> </p>
+        </div>
 
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+<br>
+
+<%= fa_icon "camera retro"%>
 <%= link_to 'Create a new property', new_property_path %>

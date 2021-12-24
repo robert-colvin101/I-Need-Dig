@@ -1,0 +1,41 @@
+.card-container {
+
+  background: #0CF5B4;
+  width: 300px;
+  margin: 40px 8px 8px 8px;
+  padding: 8px;
+  box-shadow: 5px 5px 50px lightgrey;
+  border-radius: 8px;
+  display: grid;
+}
+.property-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+.card-image {
+  border-radius: 8px;
+  width: 275px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.card-box {
+  display: grid;
+}
+.card-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-box-title {
+  margin: 8px;
+  position: absolute;
+}
+.card-text {
+  margin: 8px;
+}
+.box1 {
+  display: flex;
+  justify-content: space-between;
+}
