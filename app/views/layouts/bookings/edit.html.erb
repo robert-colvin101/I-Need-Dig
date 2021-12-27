@@ -1,0 +1,5 @@
+<%= simple_form_for [property, booking] do |f| %>
+  <%= f.input :booking_start, as: :datetime, html5: true %>
+  <%= f.input :booking_end, as: :datetime, html5: true %>
+  <%= f.submit "Reserve", class: "btn-search btn-search-index" %>
+<% end %>
