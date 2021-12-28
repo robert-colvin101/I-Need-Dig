@@ -6,6 +6,5 @@ class PagesController < ApplicationController
 
   def profile
     @properties = Properties.all
-
   end
 end

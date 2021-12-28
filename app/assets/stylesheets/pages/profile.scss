@@ -1,6 +1,30 @@
 .bookingbox {
   padding: 16px;
 }
+.bookings-title {
+  padding-top:16px;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+.bookings-container {
+  display: flex;
+  padding: 16px;
+}
 .profile-title {
   padding: 16px;
+}
+.booking-details {
+  font-size: 12px;
+  position: relative;
+  top: 32px;
+  justify-content: space-between;
+}
+.booking {
+  width: 300px;
+  padding-right: 24px;
+  padding-bottom: 100px;
+  display: flex;
+}
+.bookings-name {
+  position: absolute;
 }

@@ -4,10 +4,12 @@ class BookingsController < ApplicationController
   end
 
   def new
+    find_property
     @booking = Booking.new
   end
 
   def create
+    find_property
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.property = @property
@@ -41,7 +43,7 @@ class BookingsController < ApplicationController
   private
 
   def find_property
-    @property = Properyy.find(params[:property_id])
+    @property = Property.find(params[:property_id])
   end
 
   def booking_params
