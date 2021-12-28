@@ -1,0 +1,30 @@
+input[type=checkbox] {
+  position: absolute;
+   top: -9999px;
+   left: -9999px;
+}
+
+#entry-label {
+  font-family: 'Rubik Mono One', sans-serif;
+  font-size: 100px;
+  text-align: center;
+  width: 100%;
+  padding: 16px;
+  webkit-appearance: push-button;
+  -moz-appearance: button;
+  cursor: pointer;
+}
+
+.entry-text {
+  padding: 16px;
+  visibility: hidden;
+}
+
+input[type=checkbox]:checked ~ .entry-text {
+  visibility: visible;
+  -webkit-transition: opacity 2s ease-in;
+}
+
+input[type=checkbox]:checked ~ .label {
+  background: blue;
+}
