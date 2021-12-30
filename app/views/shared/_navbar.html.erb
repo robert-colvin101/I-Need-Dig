@@ -75,5 +75,14 @@
         <% end %>
       </a>
     </li>
+    <li class="nav__item">
+      <a href="#hoi" class="nav__link">
+       <% if user_signed_in? %>
+       <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+        <span class="nav__text">
+        </span>
+        <% end %>
+      </a>
+    </li>
   </ul>
 </nav>
