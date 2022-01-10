@@ -1,0 +1,13 @@
+.host_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.host_image {
+  grid-position: 2 1;
+}
+
+  _.host_textbox {
+  padding: 16px;
+
+}
