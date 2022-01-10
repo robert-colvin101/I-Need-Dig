@@ -4,7 +4,7 @@
 <h2>Log in</h2>
 <h2>Become a host</h2>
 <h2>Learn more</h2>
- -->
+-->
 
 <nav class="nav">
   <input class="nav__trigger-input" type="checkbox" id="trigger" aria-label="open the navigation"/>
@@ -17,72 +17,76 @@
         <%= link_to root_path do %>
         <span  class="nav__text">
          Home
-        </span>
-        <% end %>
-      </a>
-    </li>
-    <li class="nav__item">
-      <a href="#hoi" class="nav__link">
-        <%= link_to new_user_registration_path do %>
-        <span class="nav__text">
-          Become a host
-        </span>
-        <% end %>
-      </a>
-      <input class="nav__submenu-trigger-input" type="checkbox" id="submenu-trigger" />
-      <label class="nav__submenu-trigger-finger" for="submenu-trigger"></label>
-      <ul class="nav__list-child">
-        <li class="nav__item">
-          <a href="#hoi" class="nav__link">
-            <span class="nav__text">
-              Learn more
-            </span>
-          </a>
-        </li>
-        <li class="nav__item">
-          <a href="#hoi" class="nav__link">
-            <span class="nav__text">
-              Log in
-            </span>
-          </a>
-        </li>
-      </ul>
-    </li>
-    <li class="nav__item">
-      <a href="#hoi" class="nav__link">
-        <%= link_to new_user_session_path do %>
-        <span class="nav__text">
-          Log in
-        </span>
-        <% end %>
-      </a>
-    </li>
-    <li class="nav__item">
-      <a href="#hoi" class="nav__link">
-        <span class="nav__text">
-          Contact
-        </span>
-      </a>
-    </li>
-    <li class="nav__item">
-      <a href="#hoi" class="nav__link">
-       <% if user_signed_in? %>
-       <%=  link_to profile_path do %>
-        <span class="nav__text">
-          Dashboard
-        </span>
-        <% end %>
-        <% end %>
-      </a>
-    </li>
-    <li class="nav__item">
-      <a href="#hoi" class="nav__link">
-       <% if user_signed_in? %>
-       <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-        <span class="nav__text">
-        </span>
-        <% end %>
-      </a>
-    </li>
-  </ul>
+       </span>
+       <% end %>
+     </a>
+   </li>
+   <li class="nav__item">
+    <a href="#hoi" class="nav__link">
+      <%= link_to new_user_registration_path do %>
+      <span class="nav__text">
+        Become a host
+      </span>
+      <% end %>
+    </a>
+    <input class="nav__submenu-trigger-input" type="checkbox" id="submenu-trigger" />
+    <label class="nav__submenu-trigger-finger" for="submenu-trigger"></label>
+    <ul class="nav__list-child">
+      <li class="nav__item">
+        <a href="#hoi" class="nav__link">
+          <span class="nav__text">
+            Learn more
+          </span>
+        </a>
+      </li>
+
+      <li class="nav__item">
+
+        <a href="#hoi" class="nav__link">
+          <span class="nav__text">
+            Log in
+          </span>
+        </a>
+
+      </li>
+
+    </ul>
+  </li>
+  <li class="nav__item">
+    <a href="#hoi" class="nav__link">
+      <%= link_to new_user_session_path do %>
+      <span class="nav__text">
+        Log in
+      </span>
+      <% end %>
+    </a>
+  </li>
+  <li class="nav__item">
+    <a href="#hoi" class="nav__link">
+      <span class="nav__text">
+        Contact
+      </span>
+    </a>
+  </li>
+  <li class="nav__item">
+    <a href="#hoi" class="nav__link">
+     <% if user_signed_in? %>
+     <%=  link_to profile_path do %>
+     <span class="nav__text">
+      Dashboard
+    </span>
+    <% end %>
+    <% end %>
+  </a>
+</li>
+<li class="nav__item">
+  <a href="#hoi" class="nav__link">
+   <% if user_signed_in? %>
+   <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+   <span class="nav__text">
+   </span>
+   <% end %>
+ </a>
+</li>
+</ul>
 </nav>
