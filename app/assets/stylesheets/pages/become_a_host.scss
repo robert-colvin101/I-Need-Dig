@@ -4,10 +4,33 @@
   grid-template-rows: 1fr 1fr;
 }
 .host_image {
-  grid-position: 2 1;
+  width: 100%;
+  height: 600px;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-gap: 16px;
+
+}
+.host_textbox {
+  margin: 16px;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
-  _.host_textbox {
-  padding: 16px;
-
+.host_title {
+  position: absolute;
+  top: 400px;
+  left:42%;
+}
+.rob_image {
+  align-text: center;
+  align-items: center;
+  margin: 16px;
+  border-color: black;
+  border-style: solid;
+  border-size:3px;
+  width: 200px;
+  height:400px;
+  grid-column-start:3;
+  grid-column-end:4;
 }
