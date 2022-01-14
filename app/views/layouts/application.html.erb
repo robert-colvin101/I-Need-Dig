@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>INeedDigs</title>
   <head>
-    <title>INeedDigs</title>
-    <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Monofett&family=Raleway:wght@300&family=Roboto+Mono:wght@300&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monofett&family=Raleway:wght@300&family=Roboto+Mono:wght@300&family=Rubik+Mono+One&display=swap" rel="stylesheet">
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -21,11 +21,15 @@
   </head>
 
   <body>
-
     <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-      <%= link_to root_path do %>
-    <h2 class="logo">I NEED DIGS</h2>
+    <p class="alert"><%= alert %></p>
+
+    <%= link_to root_path do %>
+      <% if user_signed_in? == true %>
+        <h2 class="logo"><i class="fas fa-home"></i></h2>
+      <% else %>
+        <h2 class="logo">I NEED DIGS <i class="fas fa-home"></i></h2>
+      <% end %>
     <% end %>
     <%= render "shared/navbar" %>
     <%= yield %>
