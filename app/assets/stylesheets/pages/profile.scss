@@ -22,9 +22,20 @@
 .booking {
   width: 300px;
   padding-right: 24px;
-  padding-bottom: 100px;
+  padding-bottom: 60px;
   display: flex;
 }
 .bookings-name {
   position: absolute;
+}
+.bookings {
+
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+  border-radius: 16px;
+  margin-bottom: 32px;
+}
+.properties {
+  padding: 16px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+  border-radius: 16px;
 }

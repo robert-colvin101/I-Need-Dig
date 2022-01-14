@@ -1,51 +1,54 @@
 <h2 class='profile-title'> Welcome <%= "#{current_user.name}" %> </h2>
 <!-- upcoming bookings -->
-<p class='bookings-title'>Upcoming Bookings</p>
-<% if current_user.bookings.size < 1 %>
+<div class="bookings">
+  <p class='bookings-title'>Upcoming Bookings</p>
+  <% if current_user.bookings.size < 1 %>
   <p>You currently have no bookings</p>
 
-<% else %>
+  <% else %>
   <div class="bookings-container">
 
-  <% current_user.bookings.each do |booking| %>
-  <div class="booking">
-  <div class="bookings-name">
-  <%= booking.property.name %>
-  </div>
-   <br>
-  <div class="booking-details">
-  <%= booking.booking_start.strftime("%d/%m/%Y")    %>
-  Booked by <%= booking.user.name %>
-  </div>
-  </div>
-<% end %>
-
-<% end %>
-
-</div>
-
-<!-- properties cards -->
-<p class="card-box-title">My Properties</p>
-<div class="property-cards">
-  <% current_user.properties.each do |property| %>
-  <div class="card-container">
-    <%= image_tag('room-image', class: 'card-image') %>
-    <div class="card-text">
-      <p class="card-name"><%= property.name  %> </p>
-      <div class="box1">
-        <p class="card-beds"> <%= fa_icon "bed" %> <%= property.beds %> </p>
-        <p class="card-price"><%= fa_icon "money-bill" %> £<%= property.price %></p>
+    <% current_user.bookings.each do |booking| %>
+    <div class="booking">
+      <div class="bookings-name">
+        <%= booking.property.name %>
       </div>
-      <div class="box1">
-
-        <p class="card-rooms"> <%= fa_icon "home" %> <%= property.rooms %> </p>
-        <p> <%= fa_icon "city" %> <%= property.city %> </p>
+      <br>
+      <div class="booking-details">
+        <%= booking.booking_start.strftime("%d/%m/%Y")    %>
+        Booked by <%= booking.user.name %>
       </div>
-
     </div>
+    <% end %>
+
+    <% end %>
+
   </div>
-  <% end %>
 </div>
+<!-- properties cards -->
+<div class="properties">
+  <p class="card-box-title">My Properties</p>
+
+  <div class="property-cards">
+    <% current_user.properties.each do |property| %>
+    <div class="card-container">
+      <%= image_tag('room-image', class: 'card-image') %>
+      <div class="card-text">
+        <p class="card-name"><%= property.name  %> </p>
+        <div class="box1">
+          <p class="card-beds"> <%= fa_icon "bed" %> <%= property.beds %> </p>
+          <p class="card-price"><%= fa_icon "money-bill" %> £<%= property.price %></p>
+        </div>
+        <div class="box1">
+
+          <p class="card-rooms"> <%= fa_icon "home" %> <%= property.rooms %> </p>
+          <p> <%= fa_icon "city" %> <%= property.city %> </p>
+        </div>
+
+      </div>
+    </div>
+    <% end %>
+  </div>
 </div>
 <br>
 
