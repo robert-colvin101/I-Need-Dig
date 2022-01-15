@@ -1,6 +1,21 @@
-<%  @properties.each do |property| %>
-<h1> <%= property.name %> </h1>
-<p> <%= property.city %> </p>
-<p> <%= property.address %> </p>
-<%= link_to(property.name, property_path(property)) %>
-<% end %>
+<div class="property-cards">
+  <% @properties.each do |property| %>
+  <div class="card-container">
+    <%= image_tag('room-image', class: 'card-image') %>
+    <div class="card-text">
+      <p class="card-name"><%= property.name  %> </p>
+      <div class="box1">
+        <p class="card-beds"> <%= fa_icon "bed" %> <%= property.beds %> </p>
+        <p class="card-price"><%= fa_icon "money-bill" %> £<%= property.price %></p>
+      </div>
+      <div class="box1">
+
+        <p class="card-rooms"> <%= fa_icon "home" %> <%= property.rooms %> </p>
+        <p> <%= fa_icon "city" %> <%= property.city %> </p>
+      </div>
+
+    </div>
+  </div>
+  <% end %>
+</div>
+<br>
