@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_20_140752) do
+ActiveRecord::Schema.define(version: 2022_01_15_154305) do
 
   create_table "bookings", force: :cascade do |t|
     t.datetime "booking_start"
@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 2021_12_20_140752) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id", null: false
+    t.float "latitude"
+    t.float "longitude"
     t.index ["user_id"], name: "index_properties_on_user_id"
   end
 
