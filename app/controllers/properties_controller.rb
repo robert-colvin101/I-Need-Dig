@@ -1,12 +1,9 @@
 class PropertiesController < ApplicationController
   geocoded_by :address
-  after_validation :geocoder
-  if:
-  :will_save_change_to_address?
-
-
+  after_validation :geocode, if: :will_save_change_to_address?
 
   before_action :set_property, only: [:show, :edit, :update, :destroy]
+
   def index
     @properties = Property.all
   end
