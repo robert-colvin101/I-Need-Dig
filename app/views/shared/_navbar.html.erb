@@ -23,9 +23,9 @@
    </li>
    <li class="nav__item">
     <a href="#hoi" class="nav__link">
-    <%= link_to new_user_registration_path do %>
+      <%= link_to new_user_registration_path do %>
       <span class="nav__text">
-    Become a host
+        Become a host
       </span>
       <% end %>
     </a>
@@ -63,9 +63,11 @@
   </li>
   <li class="nav__item">
     <a href="#hoi" class="nav__link">
+      <%= link_to contact_path do %>
       <span class="nav__text">
         Contact
       </span>
+      <% end %>
     </a>
   </li>
   <li class="nav__item">

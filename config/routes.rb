@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: "pages#entry"
   get 'profile', to: 'pages#profile'
   get 'home', to: 'pages#home'
+  get 'contact', to: 'pages#contact'
   get 'becomeahost', to: 'pages#become_a_host.html.erb'
   resources :properties do
     resources :bookings, only:[:new, :create, :update, :edit, :index]
