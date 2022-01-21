@@ -1,5 +1,8 @@
 <div class="property-cards">
+  <div class="mapbox"></div>
+
   <% @property.each do |property| %>
+  <%= link_to property_path(property) do %>
   <div class="card-container">
     <%= image_tag('room-image', class: 'card-image') %>
     <div class="card-text">
@@ -14,5 +17,6 @@
       </div>
     </div>
   </div>
+  <% end %>
   <% end %>
 </div>
