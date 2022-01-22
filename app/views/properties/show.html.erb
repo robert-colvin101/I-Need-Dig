@@ -1,12 +1,11 @@
-<div class="listing">
-  <div class="title">
+  <div class="listing">
+  <div class="show-title">
    <h1><%= @property.name %></h1>
   </div>
+  <%= image_tag('room-image', class: 'show-image') %>
 <%= @property.address %>
 <%= @property.city %>
 <%= @property.rooms %>
 <%= @property.beds %>
-
-
-<%= render 'bookings/form', property: @property, booking: @booking %>
 </div>
+<%= render 'bookings/form', property: @property, booking: @booking %>
