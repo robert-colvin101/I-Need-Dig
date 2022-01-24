@@ -1,11 +1,13 @@
   <div class="listing">
-  <div class="show-title">
-   <h1><%= @property.name %></h1>
+    <div class="show-title">
+     <h1><%= @property.name %></h1>
+   </div>
+   <%= image_tag('room-image', class: 'show-image') %>
+   <div class="property-elements">
+    <%= @property.address %>
+    <%= @property.city %>
+    <%= @property.rooms %>
+    <%= @property.beds %>
   </div>
-  <%= image_tag('room-image', class: 'show-image') %>
-<%= @property.address %>
-<%= @property.city %>
-<%= @property.rooms %>
-<%= @property.beds %>
 </div>
 <%= render 'bookings/form', property: @property, booking: @booking %>
