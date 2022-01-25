@@ -4,6 +4,7 @@
 .listing {
   display: flex;
   padding: 16px;
+  width: 100%;
 }
 .show-image {
   border-radius: 16px;
@@ -11,6 +12,7 @@
   height: 400px;
 }
 .property-elements {
+  width: 30%;
   justify-content: flex-end;
 
 }
@@ -18,5 +20,5 @@
   justify-content: flex-start;
 }
 .property-city {
-  justify-content: flex-end;
+  flex-grow: 1;
 }
