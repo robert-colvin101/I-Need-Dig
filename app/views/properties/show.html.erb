@@ -1,13 +1,19 @@
-  <div class="listing">
-    <div class="show-title">
-     <h1><%= @property.name %></h1>
-   </div>
-   <%= image_tag('room-image', class: 'show-image') %>
-   <div class="property-elements">
+
+<div class="show-title">
+ <h1><%= @property.name %></h1>
+</div>
+<div class="listing">
+ <%= image_tag('room-image', class: 'show-image') %>
+ <div class="property-elements">
+  <div class="property-address">
     <%= @property.address %>
-    <%= @property.city %>
-    <%= @property.rooms %>
-    <%= @property.beds %>
   </div>
+  <div class="property-city">
+  <%= @property.city %>
+  </div>
+
+  <%= @property.rooms %>
+  <%= @property.beds %>
+</div>
 </div>
 <%= render 'bookings/form', property: @property, booking: @booking %>

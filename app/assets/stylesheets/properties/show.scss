@@ -2,6 +2,7 @@
  margin: 16px;
 }
 .listing {
+  display: flex;
   padding: 16px;
 }
 .show-image {
@@ -10,5 +11,12 @@
   height: 400px;
 }
 .property-elements {
+  justify-content: flex-end;
 
+}
+.property-address {
+  justify-content: flex-start;
+}
+.property-city {
+  justify-content: flex-end;
 }
