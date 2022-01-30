@@ -1,3 +1,8 @@
+.total {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr
+}
 .bookingbox {
   padding: 16px;
 }
@@ -45,8 +50,15 @@
 }
 
 .mapbox {
+  grid-column-start: 2;
+  grid-column-end: 3;
   border-radius: 16px;
   background-color: black;
   width: 400px;
   height: 400px;
+}
+.propertybits {
+  grid-column-start: 2;
+  grid-column-end: 3;
+
 }

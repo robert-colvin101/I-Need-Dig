@@ -1,22 +1,23 @@
-<div class="property-cards">
-  <div class="mapbox"></div>
-
-  <% @property.each do |property| %>
-  <%= link_to property_path(property) do %>
-  <div class="card-container">
-    <%= image_tag('room-image', class: 'card-image') %>
-    <div class="card-text">
-      <p class="card-name"><%= property.name  %> </p>
-      <div class="box1">
-        <p class="card-beds"> <%= fa_icon "bed" %> <%= property.beds %> </p>
-        <p class="card-price"><%= fa_icon "money-bill" %> £<%= property.price %></p>
-      </div>
-      <div class="box1">
-        <p class="card-rooms"> <%= fa_icon "home" %> <%= property.rooms %> </p>
-        <p> <%= fa_icon "city" %> <%= property.city %> </p>
+<div class="total">
+    <div class="mapbox"></div>
+    <div class="propertybits">
+    <% @property.each do |property| %>
+    <%= link_to property_path(property) do %>
+    <div class="card-container">
+      <%= image_tag('room-image', class: 'card-image') %>
+      <div class="card-text">
+        <p class="card-name"><%= property.name  %> </p>
+        <div class="box1">
+          <p class="card-beds"> <%= fa_icon "bed" %> <%= property.beds %> </p>
+          <p class="card-price"><%= fa_icon "money-bill" %> £<%= property.price %></p>
+        </div>
+        <div class="box1">
+          <p class="card-rooms"> <%= fa_icon "home" %> <%= property.rooms %> </p>
+          <p> <%= fa_icon "city" %> <%= property.city %> </p>
+        </div>
       </div>
     </div>
-  </div>
-  <% end %>
-  <% end %>
+    <% end %>
+    <% end %>
+    </div>
 </div>
