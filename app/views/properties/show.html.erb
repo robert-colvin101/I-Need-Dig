@@ -14,8 +14,8 @@
   </div>
   </div>
 
-  <%= @property.rooms %>
-  <%= @property.beds %>
+  <p class ='room'>rooms <%= @property.rooms %></p>
+  <p>beds <%= @property.beds %></p>
 </div>
 </div>
 <%= render 'bookings/form', property: @property, booking: @booking %>
