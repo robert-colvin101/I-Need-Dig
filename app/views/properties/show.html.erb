@@ -21,5 +21,5 @@
 <%= render 'bookings/form', property: @property, booking: @booking %>
 
 <% if @property.user = current_user %>
-  <%= link_to edit_property(@property) %>
+  <%= link_to 'edit property', edit_property_path(@property) %>
 <% end %>
