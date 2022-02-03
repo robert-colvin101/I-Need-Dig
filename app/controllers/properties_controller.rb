@@ -10,6 +10,9 @@ class PropertiesController < ApplicationController
   def new
     @property = Property.new
   end
+  def update
+    @property.update(property_params)
+  end
 
   def create
     @property = Property.new(property_params)
