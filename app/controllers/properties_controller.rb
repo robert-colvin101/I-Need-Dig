@@ -10,9 +10,6 @@ class PropertiesController < ApplicationController
   def new
     @property = Property.new
   end
-  def update
-    @property.update(property_params)
-  end
 
   def create
     @property = Property.new(property_params)
@@ -33,6 +30,14 @@ class PropertiesController < ApplicationController
     @property = Property.find(params[:id])
   end
 
+  def update
+    @property.update(property_params)
+    if @property.save
+      redirect_to property_path(@property)
+    else redirect_to edit_property_path(@property)
+    end
+  end
+
   def destroy
     @property.destroy
     redirect_to property_path
@@ -44,7 +49,7 @@ class PropertiesController < ApplicationController
   end
 
   def property_params
-    params.require(:property).permit(:address, :name, :city, :rooms, :beds, :price)
+    params.require(:property).permit(:address, :name, :city, :rooms, :beds, :price, :description)
   end
 end
 
