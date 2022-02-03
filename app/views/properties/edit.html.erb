@@ -1,0 +1,17 @@
+ <%= simple_form_for(@property) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+  <%= f.label :city%>
+  <%= f.text_field :city %>
+  <%= f.label :rooms %>
+  <%= f.text_field :rooms %>
+  <%= f.label :beds%>
+  <%= f.number_field :beds %>
+  <%= f.label :price%>
+  <%= f.number_field :price %>
+
+
+  <%= f.submit %>
+<% end %>

@@ -19,3 +19,7 @@
 </div>
 </div>
 <%= render 'bookings/form', property: @property, booking: @booking %>
+
+<% if @property.user = current_user %>
+  <%= link_to edit_property(@property) %>
+<% end %>
