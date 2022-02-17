@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Monofett&family=Raleway:wght@300&family=Roboto+Mono:wght@300&family=Rubik+Mono+One&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -33,5 +33,9 @@
     <% end %>
     <%= render "shared/navbar" %>
     <%= yield %>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   </body>
 </html>
