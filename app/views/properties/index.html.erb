@@ -3,7 +3,7 @@
     <div class="propertybits">
     <% @property.each do |property| %>
     <%= link_to property_path(property) do %>
-    <div class="card-container">
+    <div class="card-container" data-aos="fade-up">
       <%= image_tag('room-image', class: 'card-image') %>
       <div class="card-text">
         <p class="card-name"><%= property.name  %> </p>
