@@ -1,5 +1,5 @@
 <div class="total">
-    <div style="width: 50%; height: 600px;" data-aos="fade-up" data-controller="mapbox" data-mapbox-markers-value="<%= @markers.to_json %>" data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+    <div style="width: 50%; height: 600px;" data-controller="mapbox" data-mapbox-markers-value="<%= @markers.to_json %>" data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     <div class="propertybits">
     <% @properties.each do |property| %>
     <%= link_to property_path(property) do %>

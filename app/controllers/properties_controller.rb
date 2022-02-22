@@ -1,5 +1,4 @@
 class PropertiesController < ApplicationController
-  # after_validation :geocode, if: :will_save_change_to_address?
 
   before_action :set_property, only: [:show, :edit, :update, :destroy]
 
@@ -9,7 +8,7 @@ class PropertiesController < ApplicationController
     @markers = @properties.geocoded.map do | property |
       {
         lat: property.latitude,
-        lng: flat.longitude
+        lng: property.longitude
       }
     end
   end
