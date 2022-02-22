@@ -1,7 +1,7 @@
 <div class="total">
     <div class="mapbox" data-aos="fade-up"></div>
     <div class="propertybits">
-    <% @property.each do |property| %>
+    <% @properties.each do |property| %>
     <%= link_to property_path(property) do %>
     <div class="card-container" data-aos="fade-up">
       <%= image_tag('room-image', class: 'card-image') %>
