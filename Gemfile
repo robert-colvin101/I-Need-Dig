@@ -21,6 +21,7 @@ gem 'simple_form'
 gem 'devise'
 gem "font-awesome-rails"
 gem 'geocoder'
+gem 'stimulus-rails'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
