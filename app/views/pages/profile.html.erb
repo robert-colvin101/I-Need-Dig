@@ -1,9 +1,9 @@
 <div data-aos="fade-up">
-<h2 class='profile-title'> Welcome <%= "#{current_user.name}" %> </h2>
-<!-- Edit user -->
-
-<%= link_to 'Edit your details', edit_user_registration_path, :class => 'property_link' %>
-
+  <div class="top_bit">
+    <h2 class='profile-title'> Welcome <%= "#{current_user.name}" %> </h2>
+    <!-- Edit user -->
+    <%= link_to 'Edit your details', edit_user_registration_path, :class => 'edit_user_link' %>
+  </div>
 <!-- upcoming bookings -->
 <div class="bookings">
   <p class='bookings-title'>Upcoming Bookings</p>
@@ -54,7 +54,8 @@
     </div>
     <% end %>
   </div>
+  <%= link_to 'Create a new property', new_property_path, :class => 'property_link' %>
 </div>
-<%= link_to 'Create a new property', new_property_path, :class => 'property_link' %>
+
 
 </div>
