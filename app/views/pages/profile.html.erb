@@ -1,5 +1,9 @@
 <div data-aos="fade-up">
 <h2 class='profile-title'> Welcome <%= "#{current_user.name}" %> </h2>
+<!-- Edit user -->
+
+<%= link_to 'Edit your details', edit_user_registration_path, :class => 'property_link' %>
+
 <!-- upcoming bookings -->
 <div class="bookings">
   <p class='bookings-title'>Upcoming Bookings</p>
