@@ -2,6 +2,7 @@ input[type=checkbox] {
   position: absolute;
    top: -9999px;
    left: -9999px;
+   z-index: 4;
 }
 
 #entry-label {
@@ -13,6 +14,7 @@ input[type=checkbox] {
   webkit-appearance: push-button;
   -moz-appearance: button;
   cursor: pointer;
+  z-index: 4;
 }
 .join-button {
   position: absolute;
@@ -24,6 +26,7 @@ input[type=checkbox] {
 .entry-text {
   padding: 16px;
   visibility: hidden;
+  z-index: 4;
 }
 
 input[type=checkbox]:checked ~ .entry-text {
@@ -32,5 +35,116 @@ input[type=checkbox]:checked ~ .entry-text {
 
 input[type=checkbox]:checked ~ #entry-label {
   background: blue;
+}
+
+// Background
+
+
+.d1 {
+  position: absolute;
+  background-image: url(https://i2-prod.mirror.co.uk/incoming/article12016015.ece/ALTERNATES/s1200b/This-is-what-its-like-living-in-one-of-Croydons-smallest-flats.jpg);
+  background-size: 2700px 1500px;
+
+  height: 30vh;
+  width: 15vw;
+  background-position: 0 50%;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+  animation: dd1 10s 1, dd12 10s 1;
+  animation-delay: 4s, 14s;
+  opacity: 0.6;
+}
+.d2 {
+  position: absolute;
+  background-image: url(https://i2-prod.mirror.co.uk/incoming/article12016015.ece/ALTERNATES/s1200b/This-is-what-its-like-living-in-one-of-Croydons-smallest-flats.jpg);
+  background-size: 2700px 1500px;
+
+  height: 50vh;
+  width: 25vw;
+
+  background-position: -10vw 50%;
+  left: 10vw;
+
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+  animation: dd2 10s 2;
+  animation-delay: 4s;
+  opacity: 0.6;
+}
+.d3 {
+  position: absolute;
+  background-image: url(https://i2-prod.mirror.co.uk/incoming/article12016015.ece/ALTERNATES/s1200b/This-is-what-its-like-living-in-one-of-Croydons-smallest-flats.jpg);
+  background-size: 2700px 1500px;
+  overflow: hidden;
+
+  height: 80vh;
+  width: 40vw;
+  left: 25vw;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+  background-position: -35vw 50%;
+
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+  animation: dd3 10s 2;
+  animation-delay: 4s;
+  opacity: 0.6;
+}
+.d4 {
+  position: absolute;
+  overflow: hidden;
+  background-image: url(https://i2-prod.mirror.co.uk/incoming/article12016015.ece/ALTERNATES/s1200b/This-is-what-its-like-living-in-one-of-Croydons-smallest-flats.jpg);
+  background-size: 2700px 1500px;
+
+  height: 60vh;
+  width: 25vw;
+  left: 60vw;
+  background-position: -70vw 50%;
+
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+  animation: dd4 10s 2;
+  animation-delay: 4s;
+  opacity: 0.6;
+}
+
+@keyframes dd1 {
+  0% {
+  }
+  50% {
+    width: 95vw;
+  }
+}
+@keyframes dd12 {
+  0% {
+  }
+  50% {
+    background-position: 50%;
+  }
+}
+@keyframes dd2 {
+  0% {
+  }
+  50% {
+    background-position: 40%;
+  }
+}
+@keyframes dd3 {
+  0% {
+  }
+  50% {
+    background-position: 30%;
+  }
+}
+@keyframes dd4 {
+  0% {
+  }
+  50% {
+    background-position: 20%;
+  }
 }
 
