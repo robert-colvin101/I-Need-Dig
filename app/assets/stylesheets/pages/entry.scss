@@ -24,7 +24,8 @@ input[type=checkbox] {
 }
 
 .entry-text {
-  padding: 16px;
+  padding-top:200px;
+  padding-left: 16px;
   visibility: hidden;
   z-index: 4;
 }
@@ -39,10 +40,12 @@ input[type=checkbox]:checked ~ #entry-label {
 
 // Background
 
-
+.background {
+  padding-left: 32px;
+}
 .d1 {
   position: absolute;
-  background-image: url(https://i2-prod.mirror.co.uk/incoming/article12016015.ece/ALTERNATES/s1200b/This-is-what-its-like-living-in-one-of-Croydons-smallest-flats.jpg);
+  background-image: url(https://previews.123rf.com/images/doomu/doomu1806/doomu180600056/104594858-real-estate-property-industry-concept-simple-white-houses-on-a-white-background-3d-rendering.jpg);
   background-size: 2700px 1500px;
 
   height: 30vh;
@@ -54,11 +57,11 @@ input[type=checkbox]:checked ~ #entry-label {
   z-index: -1;
   animation: dd1 10s 1, dd12 10s 1;
   animation-delay: 4s, 14s;
-  opacity: 0.6;
+  border-radius: 8px;
 }
 .d2 {
   position: absolute;
-  background-image: url(https://i2-prod.mirror.co.uk/incoming/article12016015.ece/ALTERNATES/s1200b/This-is-what-its-like-living-in-one-of-Croydons-smallest-flats.jpg);
+  background-image: url(https://previews.123rf.com/images/doomu/doomu1806/doomu180600056/104594858-real-estate-property-industry-concept-simple-white-houses-on-a-white-background-3d-rendering.jpg);
   background-size: 2700px 1500px;
 
   height: 50vh;
@@ -66,17 +69,17 @@ input[type=checkbox]:checked ~ #entry-label {
 
   background-position: -10vw 50%;
   left: 10vw;
-
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
   top: 50%;
   transform: translateY(-50%);
-  z-index: -1;
+  z-index: -2;
   animation: dd2 10s 2;
   animation-delay: 4s;
-  opacity: 0.6;
+  border-radius: 8px;
 }
 .d3 {
   position: absolute;
-  background-image: url(https://i2-prod.mirror.co.uk/incoming/article12016015.ece/ALTERNATES/s1200b/This-is-what-its-like-living-in-one-of-Croydons-smallest-flats.jpg);
+  background-image: url(https://previews.123rf.com/images/doomu/doomu1806/doomu180600056/104594858-real-estate-property-industry-concept-simple-white-houses-on-a-white-background-3d-rendering.jpg);
   background-size: 2700px 1500px;
   overflow: hidden;
 
@@ -85,31 +88,29 @@ input[type=checkbox]:checked ~ #entry-label {
   left: 25vw;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
   background-position: -35vw 50%;
-
   top: 50%;
   transform: translateY(-50%);
-  z-index: -1;
+  z-index: -2;
   animation: dd3 10s 2;
   animation-delay: 4s;
-  opacity: 0.6;
+  border-radius: 8px;
 }
 .d4 {
   position: absolute;
   overflow: hidden;
-  background-image: url(https://i2-prod.mirror.co.uk/incoming/article12016015.ece/ALTERNATES/s1200b/This-is-what-its-like-living-in-one-of-Croydons-smallest-flats.jpg);
+  background-image: url(https://previews.123rf.com/images/doomu/doomu1806/doomu180600056/104594858-real-estate-property-industry-concept-simple-white-houses-on-a-white-background-3d-rendering.jpg);
   background-size: 2700px 1500px;
-
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
   height: 60vh;
   width: 25vw;
   left: 60vw;
   background-position: -70vw 50%;
-
   top: 50%;
   transform: translateY(-50%);
-  z-index: -1;
+  z-index: -2;
   animation: dd4 10s 2;
   animation-delay: 4s;
-  opacity: 0.6;
+  border-radius: 8px;
 }
 
 @keyframes dd1 {
