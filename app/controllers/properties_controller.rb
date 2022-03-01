@@ -4,11 +4,18 @@ class PropertiesController < ApplicationController
 
   def index
     @properties = Property.all
+
     @markers = @properties.geocoded.map do |property|
       {
         lat: property.latitude,
         lng: property.longitude
       }
+    end
+
+    if params[:search_by_city].present?
+      @properties = Property.where("city LIKE ?", "%#{params[:search_by_city]}%")
+    else
+      @properties = Property.all
     end
   end
 

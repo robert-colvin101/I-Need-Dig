@@ -1,22 +1,19 @@
 <div class="home-container">
   <div class="green-home" data-aos="fade-up">
     <h2 class='green-home-text'>Accomodation for theatre professionals, democratized, simplified, revolutionized.</h2>
-    <%= form_tag properties_path, method: :get do %>
-    <div class="green-home-search">
-      <%= text_field_tag :query,
-      params[:query],
-      class: "green-home-search-form",
-        placeholder: "City?"
-        %>
-        <%= submit_tag "Search", class: "search-button" %>
-        <% end %>
-        <div class="form-box">Check in?</div>
-        <div class="form-box">Check out?</div>
-        <div class="form-box">Guests?</div>
-        <div class="form-box">Beds</div>
-        <div class="form-box">With Host?</div>
+
+    <div class="searchbar">
+      <%= form_tag properties_path, method: "GET" do %>
+        <div class="green-home-search">
+          <%= text_field_tag :search_by_city, params[:search_by_city],
+          placeholder: "City?",  class: "green-home-search-form"%>
+          <%= submit_tag "Search", class: "search-button" %>
+          <% end %>
+        </div>
       </div>
     </div>
+
+
   <%= image_tag 'home-image', class: 'home-image', 'data-aos': "fade-up" %>
 </div>
 <div></div>
